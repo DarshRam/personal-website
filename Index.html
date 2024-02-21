@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"content="IE=edge">
+        <meta name ="viewport" content="width=device-width , initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/00549d08b2.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                   <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                   </ul>
+                </nav>
+                <div class="header-text">
+                    <p>A Student</p>
+                    <h1>Hi , I'm <span>Darshana</span><br> from Christ(Deemed To Be University)</h1>
+                </div>
+
+            </div>
+            
+        </div>
+
+        
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="E:\New Learnings\Images\profile.jpeg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>A detail oriented and multitasking third year student of 
+                            Christ(Deemed To Be University) , Bangalore with a 4.0 GPA.
+                            Seeking Challenging work oppurtunities that allow me to continue
+                            learning and develop my skills </p>
+                            
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>Web Developement</span><br>Web App Developement</li>
+                                    <li><span>App Developement</span><br>Building android apps</li>
+                                    <li>Java</li>
+                                    <li>SQL</li>
+                                    <li>Data Analytics through SPSS</li>
+
+                                    
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>Internship</span><br>I Completed my Internship at Titan Company Limited,
+                                        where I recieved hands-on guidance in full stack Developement
+                                        for student login system , During this experience , I gained 
+                                        value insights into creating intuitive and user-friendly 
+                                        interfaces for seamless interactions.</li>
+                                    <li><span>Events Participated</span><br>Attended Bangalore 
+                                    Tech Summit 2023 and observed the Innovative projects preseneted
+                                by various Companies significantly heightened my interest in Tech
+                            Industry.</li>
+                                    
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2018 - 2019</span><br>The Titan School (Class X CBSE with 83%)</li>
+                                    <li><span>2019 - 2021</span><br>Maharishi Vidya Mandir(Class XII(CS) CBSE with 88.2%) </li>
+                                    <li><span>2021 - 2025</span><br>Christ(Deemed to be University) with GPA 4.00/4.00<li>
+                        
+                            </div>
+                    
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>I created a student login portal frontend featuring fields
+                    for username,password,email,and phone number.Upon submission
+                    the information is stored in an table. </p>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>I developed a food delivery app with a user-friendly interface
+                    for ordering a variety of food items.</p>
+                
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>Web App</h2>
+                <p>I developed a language learning web app with features such as story telling , 
+                    alphabets , games and quizzes.</p>
+                    
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i>darshram31@gmail.com</p>
+           <div class="social-icons">
+            <a href="https://www.linkedin.com/in/darshana-r-264526270/"><i class="fa-brands fa-linkedin"></i></a>
+           </div>
+           <a href="D:\Resume\Darshana_Resume  (1).pdf" class="btn btn2">Download Resume</a>
+
+        </div>
+        <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required>  
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>  
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+
+        </div>
+            <div class="contact-right">
+
+            </div>
+
+       
+        
+
+
+      </div>  
+    </div>
+  
+
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+
+document.getElementById(tabname).classList.add("active-tab");
+
+}
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbweUg5TPXouhc1RAds2N5MAECRQ45lROsnzyv36lHjXo2UNnAo5uYGoEbbcfDjSoGEuAQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+    </body>
+</html>
